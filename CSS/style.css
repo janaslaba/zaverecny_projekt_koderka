@@ -8,10 +8,47 @@ html {
 }
 
 /* barvy */
+/* Komponenty */
+.button {
+  padding: 20px 30px;
+  border-radius: 0.5em;
+  background-color: #0E1BB7;
+  display: inline-block;
+}
+.button__title {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.button:hover, .button:focus, .button:active {
+  background-color: #0B17A5;
+}
+
+.button__service {
+  background-color: #E5E5E5;
+  height: 100px;
+  display: inline-block;
+}
+
 body {
-  padding: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.main {
+  padding: 20px;
+}
+
+.header {
+  padding: 20px;
+}
+.header__link {
+  text-decoration: none;
+  padding: 20px;
+}
+.header__link:first-child {
+  padding-left: 0;
 }
 
 .hero__image {
@@ -19,28 +56,33 @@ body {
   background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  border-radius: 0.5em;
+}
+.hero__caption, .hero__caption a {
+  color: #FFFFFF;
+  opacity: 0.8;
+  font-size: 12px;
 }
 .hero__caption {
-  color: #888888;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 .hero__title {
   font-size: 36px;
   color: #0E1BB7;
 }
 
-/*
-.hero__image {
-    background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
-}
-*/
 .footer {
   background-color: #6B6C70;
   color: #FFFFFF;
   text-align: center;
-  height: 60px;
-  vertical-align: center;
+  height: 80px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 .footer__body {
   margin: 0;
-  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
