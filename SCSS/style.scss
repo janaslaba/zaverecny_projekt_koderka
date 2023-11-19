@@ -26,6 +26,28 @@ body {
     font-size: 16px;
 }
 
+.hero {
+    &__image {
+        height: 450px;
+        background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    &__caption {
+        color: $c-text-secondary;
+    }
+
+    &__title {
+        font-size: 36px;
+        color: $c-primary;
+    }
+}
+/*
+.hero__image {
+    background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+}
+*/
 
 .footer {
     background-color: $c-footer;

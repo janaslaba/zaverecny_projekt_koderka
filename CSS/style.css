@@ -1,0 +1,46 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+/* barvy */
+body {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.hero__image {
+  height: 450px;
+  background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero__caption {
+  color: #888888;
+}
+.hero__title {
+  font-size: 36px;
+  color: #0E1BB7;
+}
+
+/*
+.hero__image {
+    background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+}
+*/
+.footer {
+  background-color: #6B6C70;
+  color: #FFFFFF;
+  text-align: center;
+  height: 60px;
+  vertical-align: center;
+}
+.footer__body {
+  margin: 0;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
