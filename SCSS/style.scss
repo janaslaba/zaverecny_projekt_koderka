@@ -1,0 +1,40 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* barvy */ 
+$c-primary: #0E1BB7;
+$c-background-secondary: #E5E5E5;
+$c-text-primary: #131010;
+$c-text-secondary: #888888;
+$c-white: #FFFFFF;
+
+$c-lightgrey: #F0F0F0;
+$c-grey: #80808080;
+
+$c-footer: #6B6C70;
+
+
+$font-basic: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+
+body {
+    padding: 20px;
+    font-family: $font-basic;
+    font-size: 16px;
+}
+
+
+.footer {
+    background-color: $c-footer;
+    color: $c-white;
+    text-align: center;
+    height: 60px;
+    vertical-align: center;
+    &__body {
+        margin: 0;
+        padding: 20px; 
+    }
+}
