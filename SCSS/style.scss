@@ -20,11 +20,13 @@ $c-footer: #6B6C70;
 $font-basic: 'Montserrat', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
+$border-radius: 3px;
+
 /* Komponenty */
 
 .button {
     padding: 15px 45px;
-    border-radius: 2em;
+    border-radius: $border-radius;
     background-color: $c-primary;
     display: inline-block;
     &__title {
@@ -61,7 +63,7 @@ $font-secondary: 'Open Sans', sans-serif;
     &__input {
         width: 100%;
         outline: 0;
-        border-radius: 2px;
+        border-radius: $border-radius;
         font-size: 16px;
         padding: 5px;
         background-color:$c-lightgrey;
@@ -99,10 +101,17 @@ body {
     font-size: 36px;
 }
 
+.section__title {
+    font-size: 24px;
+}
+
+
+
 /*Stylování header*/
 
 .header {
     padding: 20px;
+
     &__link {
         text-decoration: none;
         padding: 20px;
@@ -119,7 +128,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
-        border-radius: 0.5em;
+        border-radius: $border-radius;
     }
     
     &__caption,
