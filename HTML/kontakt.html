@@ -34,17 +34,22 @@
 
         <p> Napište na info@securu.cz, zavolejte na +420 731 435 836 nebo jednoduše vyplňte kontaktní formulář.</p>
 
-        <label for="jmeno">Jméno a příjmení</label>
-        <input type="text" name="jmeno" id="jmeno" size="40" maxlength="40" autofocus value="Jméno" required>
+        <div class="formfield">
+            <label class="formfield__label" for="jmeno">Jméno a příjmení</label>
+            <input class="formfield__input" type="text" name="jmeno" id="jmeno" size="40" maxlength="40" autofocus required>
+        </div>    
+        <div class="formfield">
+            <label class="formfield__label" for="telefon">Telefon</label>
+            <input class="formfield__input" type="tel" name="telefon" id="telefon" required>    
+        </div>
+        <div class="formfield">    
+            <label class="formfield__label" for="zprava">Vaše zpráva</label>
+            <textarea class="formfield__input" name="zprava" id="zprava" cols="50" rows="10"></textarea>
+        </div>    
 
-        <label for="telefon">Telefon</label>
-        <input type="tel" name="telefon" id="telefon">    
-
-        <label for="zprava">Vaše zpráva</label>
-        <textarea name="zprava" id="zprava" cols="50" rows="50"></textarea>
-        
-
-        button / odeslat
+        <div class="button">
+            <a class="button__title" href="">Odeslat</a>
+        </div>
 
 
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* nejsme vcerejsi, pouzivame moderni box model */
 html {
   box-sizing: border-box;
@@ -10,14 +11,15 @@ html {
 /* barvy */
 /* Komponenty */
 .button {
-  padding: 20px 30px;
-  border-radius: 0.5em;
+  padding: 15px 45px;
+  border-radius: 2em;
   background-color: #0E1BB7;
   display: inline-block;
 }
 .button__title {
   color: #FFFFFF;
   text-decoration: none;
+  font-weight: 600;
 }
 .button:hover, .button:focus, .button:active {
   background-color: #0B17A5;
@@ -29,6 +31,30 @@ html {
   display: inline-block;
 }
 
+/*Formulářové prvky*/
+.formfield {
+  max-width: 550px;
+  margin-bottom: 25px;
+}
+.formfield__label {
+  display: block;
+  margin-bottom: 10px;
+}
+.formfield__input {
+  width: 100%;
+  outline: 0;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 5px;
+  background-color: #F0F0F0;
+  border: 0;
+}
+.formfield__input:focus, .formfield__input:active {
+  outline: 0;
+  border: 1px solid #131010;
+}
+
+/*konec stylování formulářových prvků*/
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -40,6 +66,12 @@ body {
   padding: 20px;
 }
 
+.section__headline {
+  color: #0E1BB7;
+  font-size: 36px;
+}
+
+/*Stylování header*/
 .header {
   padding: 20px;
 }
@@ -74,6 +106,8 @@ body {
   color: #0E1BB7;
 }
 
+/*Konec stylování header*/
+/*Stylování patičky*/
 .footer {
   background-color: #6B6C70;
   color: #FFFFFF;
@@ -85,4 +119,6 @@ body {
 }
 .footer__body {
   margin: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*Konec stylování patičky*//*# sourceMappingURL=style.css.map */

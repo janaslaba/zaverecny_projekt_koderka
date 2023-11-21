@@ -23,13 +23,14 @@ $font-secondary: 'Open Sans', sans-serif;
 /* Komponenty */
 
 .button {
-    padding: 20px 30px;
-    border-radius: 0.5em;
+    padding: 15px 45px;
+    border-radius: 2em;
     background-color: $c-primary;
     display: inline-block;
     &__title {
         color: $c-white;
         text-decoration: none;
+        font-weight: 600;
     }
     &:hover,
     &:focus,
@@ -45,8 +46,40 @@ $font-secondary: 'Open Sans', sans-serif;
 
 }
 
+/*Formulářové prvky*/
+
+.formfield {
+    max-width: 550px;
+    margin-bottom: 25px;
 
 
+    &__label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 16px;
+        padding: 5px;
+        background-color:$c-lightgrey;
+        border: 0;
+
+        &:focus,
+        &:active {
+            outline: 0;
+            border: 1px solid $c-text-primary;
+        }
+
+    }
+
+
+
+}
+
+/*konec stylování formulářových prvků*/
 
 
 
@@ -60,6 +93,13 @@ body {
 .main {
     padding: 20px;
 }
+
+.section__headline {
+    color: $c-primary;
+    font-size: 36px;
+}
+
+/*Stylování header*/
 
 .header {
     padding: 20px;
@@ -101,6 +141,11 @@ body {
     }
 }
 
+/*Konec stylování header*/
+
+
+
+/*Stylování patičky*/
 
 .footer {
     background-color: $c-footer;
@@ -114,3 +159,5 @@ body {
         margin: 0;
     }
 }
+
+/*Konec stylování patičky*/
