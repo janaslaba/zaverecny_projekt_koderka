@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Znalec securu</title>
 </head>
@@ -12,11 +15,17 @@
     <!-- Hlavička-->    
 
     <header class="header">
-
-        <a class="header__link" href="">Law & Security in CyberSpace</a>
-        <a class="header__link" href="http://www.securu.cz">securu.cz</a>
-        <a class="header__link" href="http://www.znalec.it">znalec.it</a>
-        
+        <div class="header__list">
+            <div class="header__item">
+                <a class="header__link" href="">Law & Security in CyberSpace</a>
+            </div>
+            <div class="header__item">
+                <a class="header__link" href="http://www.securu.cz">securu.cz</a>
+            </div>
+            <div class="header__item">
+                <a class="header__link" href="http://www.znalec.it">znalec.it</a>
+            </div>
+        </div>
 
         <!-- hamburger menu-->
         <nav></nav>
@@ -32,12 +41,9 @@
         <!-- Hero-->
 
         <section class="hero">
-            <div class="hero__image">
-            <figcaption class="hero__caption">Photo by <a href="https://unsplash.com/@adigold1?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adi Goldstein</a> on <a href="https://unsplash.com/photos/teal-led-panel-EUsVwEOsblE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            </figcaption>
-            </div>
-    
-            <h1 class="hero__title">Unikátním způsobem spojujeme legislativní, právní a technický pohled v otázkách IT bezpečnosti</h1>
+                <h1 class="hero__title">Unikátním způsobem spojujeme legislativní, právní a technický pohled na IT bezpečnost</h1>
+                <figcaption class="hero__caption">Photo by <a href="https://unsplash.com/@adigold1?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adi Goldstein</a> on <a href="https://unsplash.com/photos/teal-led-panel-EUsVwEOsblE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                </figcaption>      
         </section>
 
         <!-- Nabídka-->
@@ -50,10 +56,11 @@
                 <li class="offer__item">poradit s podobou Vašeho nového IT systému a jeho tendrem</li>    
                 <li class="offer__item">znalecký posudek z oblasti ICT</li>    
             </ul>    
-            <div class="button">
-                <a class="button__title" href="/Sluzby/">Více o službách</a>
-            </div>
-
+            <div class="offer__button">
+                <div class="button">
+                    <a class="button__title" href="/Sluzby/">Více o službách</a>
+                </div>
+            </div>    
         </section>
  
 

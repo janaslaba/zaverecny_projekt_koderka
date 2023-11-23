@@ -9,12 +9,14 @@ html {
 }
 
 /* barvy */
+/*Border radius*/
 /* Komponenty */
 .button {
   padding: 15px 45px;
-  border-radius: 3px;
+  border-radius: 16pt;
   background-color: #0E1BB7;
   display: inline-block;
+  margin: 20px;
 }
 .button__title {
   color: #FFFFFF;
@@ -29,37 +31,47 @@ html {
   background-color: #E5E5E5;
   height: 100px;
   display: inline-block;
+  border-radius: 16pt;
 }
 
-/*Formulářové prvky*/
-.formfield {
-  max-width: 550px;
-  margin-bottom: 25px;
-}
-.formfield__label {
-  display: block;
-  margin-bottom: 10px;
-}
-.formfield__input {
-  width: 100%;
-  outline: 0;
-  border-radius: 3px;
-  font-size: 16px;
-  padding: 5px;
+.service__card {
   background-color: #F0F0F0;
-  border: 0;
-}
-.formfield__input:focus, .formfield__input:active {
-  outline: 0;
-  border: 1px solid #131010;
+  box-shadow: 2px 2px 2px #F0F0F0;
+  border-radius: 8pt;
 }
 
-/*konec stylování formulářových prvků*/
+/*Konec stylování komponent*/
+/*Stylování header*/
+.header {
+  padding: 20px;
+  background-color: #131010;
+  /*NASTAVIT JEN PROSTREDNIMU ODKAZU PADDING 5PX*/
+}
+.header__item {
+  padding: 5px 0;
+}
+@media screen and (min-width: 560px) {
+  .header__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .header__item {
+    padding: 0;
+  }
+}
+.header__link {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}
+
+/*Konec stylování header*/
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .main {
@@ -75,42 +87,78 @@ body {
   font-size: 24px;
 }
 
-/*Stylování header*/
-.header {
-  padding: 20px;
+/*stylování homepage*/
+.offer__title {
+  margin: 20px 0;
 }
-.header__link {
-  text-decoration: none;
-  padding: 20px;
+.offer__list {
+  padding-left: 20px;
+  margin-left: -5px;
 }
-.header__link:first-child {
-  padding-left: 0;
+.offer__button {
+  width: 100%;
+  text-align: center;
 }
 
-.hero__image {
-  height: 450px;
-  background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  border-radius: 3px;
+/*Formulářové prvky*/
+.formfield {
+  max-width: 550px;
+  margin-bottom: 25px;
 }
-.hero__caption, .hero__caption a {
-  color: #FFFFFF;
-  opacity: 0.8;
-  font-size: 12px;
+.formfield__label {
+  display: block;
+  margin-bottom: 10px;
 }
-.hero__caption {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+.formfield__input {
+  width: 100%;
+  outline: 0;
+  border-radius: 8pt;
+  font-size: 16px;
+  padding: 5px;
+  background-color: #F0F0F0;
+  border: 0;
 }
+.formfield__input:focus, .formfield__input:active {
+  outline: 0;
+  border: 1px solid #131010;
+}
+
+/*konec stylování formulářových prvků*/
+/**/
+/*Stylování hero sekce*/
 .hero__title {
   font-size: 36px;
   color: #0E1BB7;
+  margin: 0;
+  padding: 0;
+}
+.hero__caption {
+  display: none;
+}
+@media screen and (min-width: 760px) {
+  .hero {
+    height: 450px;
+    background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 8pt;
+    padding: 20px;
+  }
+  .hero__caption, .hero__caption a {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 12px;
+  }
+  .hero__caption {
+    display: inline;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
-/*Konec stylování header*/
+/*Konec stylování hero sekce*/
 /*Stylování patičky*/
 .footer {
   background-color: #6B6C70;

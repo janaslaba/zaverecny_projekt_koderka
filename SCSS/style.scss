@@ -20,15 +20,20 @@ $c-footer: #6B6C70;
 $font-basic: 'Montserrat', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
-$border-radius: 3px;
+/*Border radius*/
+
+$border-radius--standard: 8pt;
+$border-radius--rounded: 16pt;
 
 /* Komponenty */
 
 .button {
     padding: 15px 45px;
-    border-radius: $border-radius;
+    border-radius: $border-radius--rounded;
     background-color: $c-primary;
     display: inline-block;
+    margin: 20px;
+    
     &__title {
         color: $c-white;
         text-decoration: none;
@@ -39,14 +44,99 @@ $border-radius: 3px;
     &:active {
         background-color: $c-primary--onclick;
     }
+
+    
 }
 
 .button__service {
     background-color: $c-background-secondary;
     height: 100px;
     display: inline-block;
+    border-radius: $border-radius--rounded;
 
 }
+
+.service__card {
+    background-color: $c-lightgrey;
+    box-shadow: 2px 2px 2px $c-lightgrey;
+    border-radius: $border-radius--standard;
+}
+
+/*Konec stylování komponent*/
+
+/*Stylování header*/
+
+.header {
+    padding: 20px;
+    background-color: $c-text-primary;
+    
+    /*NASTAVIT JEN PROSTREDNIMU ODKAZU PADDING 5PX*/
+
+    &__item {       
+        padding: 5px 0;
+    } 
+
+    @media screen and (min-width: 560px) {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+     
+        &__item {
+            padding: 0;
+        } 
+    }
+
+    
+    &__link {
+        text-decoration: none;
+        color: white; 
+        margin: 0;
+    }
+
+}
+
+/*Konec stylování header*/
+
+body {
+    font-family: $font-basic;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.main {
+    padding: 20px;
+}
+
+
+.section__headline {
+    color: $c-primary;
+    font-size: 36px;
+}
+
+.section__title {
+    font-size: 24px;
+}
+
+
+/*stylování homepage*/
+
+.offer {
+    &__title {
+        margin: 20px 0;
+    }
+    &__list {
+        padding-left: 20px;
+        margin-left: -5px;
+    }
+    &__button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 /*Formulářové prvky*/
 
@@ -63,7 +153,7 @@ $border-radius: 3px;
     &__input {
         width: 100%;
         outline: 0;
-        border-radius: $border-radius;
+        border-radius: $border-radius--standard;
         font-size: 16px;
         padding: 5px;
         background-color:$c-lightgrey;
@@ -83,74 +173,62 @@ $border-radius: 3px;
 
 /*konec stylování formulářových prvků*/
 
-
-
-body {
-    font-family: $font-basic;
-    font-size: 16px;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.main {
-    padding: 20px;
-}
-
-.section__headline {
-    color: $c-primary;
-    font-size: 36px;
-}
-
-.section__title {
-    font-size: 24px;
-}
+/**/
 
 
 
-/*Stylování header*/
 
-.header {
-    padding: 20px;
 
-    &__link {
-        text-decoration: none;
-        padding: 20px;
-    }
-    &__link:first-child {
-        padding-left: 0;
-    }
-}
+
+
+/*Stylování hero sekce*/
 
 .hero {
-    &__image {
+    
+    &__title {
+        font-size: 36px;
+        color: $c-primary;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__caption {
+        display: none;
+    }
+
+    @media screen and (min-width: 760px) {
+        
+    
         height: 450px;
         background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
-        border-radius: $border-radius;
+        border-radius: $border-radius--standard;
+        padding: 20px;
+        
+        
+        &__caption,
+        &__caption a {
+            color: $c-white;
+            opacity: 0.8;
+            font-size: 12px;
+        }
+
+        &__caption {
+            display: inline;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
     }
     
-    &__caption,
-    &__caption a {
-        color: $c-white;
-        opacity: 0.8;
-        font-size: 12px;
-    }
-
-    &__caption {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    &__title {
-        font-size: 36px;
-        color: $c-primary;
-    }
 }
 
-/*Konec stylování header*/
+/*Konec stylování hero sekce*/
+
+
+
 
 
 
