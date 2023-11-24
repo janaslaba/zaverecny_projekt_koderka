@@ -1,47 +1,7 @@
 @charset "UTF-8";
-/* nejsme vcerejsi, pouzivame moderni box model */
-html {
-  box-sizing: border-box;
-}
-
-*, :after, :before {
-  box-sizing: inherit;
-}
-
 /* barvy */
-/*Border radius*/
-/* Komponenty */
-.button {
-  padding: 15px 45px;
-  border-radius: 16pt;
-  background-color: #0E1BB7;
-  display: inline-block;
-  margin: 20px;
-}
-.button__title {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 600;
-}
-.button:hover, .button:focus, .button:active {
-  background-color: #0B17A5;
-}
-
-.button__service {
-  background-color: #E5E5E5;
-  height: 100px;
-  display: inline-block;
-  border-radius: 16pt;
-}
-
-.service__card {
-  background-color: #F0F0F0;
-  box-shadow: 2px 2px 2px #F0F0F0;
-  border-radius: 8pt;
-}
-
-/*Konec stylování komponent*/
-/*Stylování header*/
+/* font */
+/*border radius*/
 .header {
   padding: 20px;
   background-color: #131010;
@@ -62,45 +22,85 @@ html {
 }
 .header__link {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   margin: 0;
 }
 
 /*Konec stylování header*/
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.6;
+/* Komponenty */
+.button {
+  padding: 15px 45px;
+  border-radius: 16pt;
+  background-color: #0E1BB7;
+  display: inline-block;
+  margin: 20px;
 }
-
-.main {
-  padding: 20px;
+.button__title {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
 }
-
-.section__headline {
-  color: #0E1BB7;
-  font-size: 36px;
+.button:hover, .button:focus, .button:active {
+  background-color: #0B17A5;
 }
-
-.section__title {
-  font-size: 24px;
-}
-
-/*stylování homepage*/
-.offer__title {
-  margin: 20px 0;
-}
-.offer__list {
-  padding-left: 20px;
-  margin-left: -5px;
-}
-.offer__button {
+.button--centered {
   width: 100%;
   text-align: center;
 }
 
-/*Formulářové prvky*/
+.service__crossroad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.button__service {
+  background-color: #E5E5E5;
+  padding: 20px;
+  line-height: 1.4;
+  height: 220px;
+  border-radius: 16pt;
+  position: relative;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  box-shadow: 1px 1px 8px #D4DDFB;
+}
+.button__service__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.arrow--crossroad {
+  fill: #0E1BB7;
+  transform: rotateZ(90deg);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.service__card {
+  background-color: #F0F0F0;
+  box-shadow: 2px 2px 2px #F0F0F0;
+  border-radius: 8pt;
+}
+
+/*Konec stylování komponent*/
+.footer {
+  background-color: #6B6C70;
+  color: #FFFFFF;
+  text-align: center;
+  height: 80px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.footer__body {
+  margin: 0;
+}
+
 .formfield {
   max-width: 550px;
   margin-bottom: 25px;
@@ -124,7 +124,47 @@ body {
 }
 
 /*konec stylování formulářových prvků*/
-/**/
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.main {
+  padding: 20px;
+}
+
+.section__headline {
+  color: #0E1BB7;
+  font-size: 36px;
+}
+.section__description {
+  font-size: 18px;
+}
+
+.section__title {
+  font-size: 24px;
+}
+
+/*stylování homepage*/
+.offer__title {
+  margin: 20px 0;
+}
+.offer__list {
+  padding-left: 20px;
+  margin-left: -5px;
+}
+
 /*Stylování hero sekce*/
 .hero__title {
   font-size: 36px;
@@ -158,19 +198,4 @@ body {
   }
 }
 
-/*Konec stylování hero sekce*/
-/*Stylování patičky*/
-.footer {
-  background-color: #6B6C70;
-  color: #FFFFFF;
-  text-align: center;
-  height: 80px;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-}
-.footer__body {
-  margin: 0;
-}
-
-/*Konec stylování patičky*//*# sourceMappingURL=style.css.map */
+/*Konec stylování hero sekce*//*# sourceMappingURL=style.css.map */

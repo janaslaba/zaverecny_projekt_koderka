@@ -1,106 +1,16 @@
+@use 'promenne';
+@use 'header';
+@use 'components';
+@use 'footer';
+@use 'form';
+
+
 /* nejsme vcerejsi, pouzivame moderni box model */
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
-
-/* barvy */ 
-$c-primary: #0E1BB7;
-$c-primary--onclick: #0B17A5;
-$c-background-secondary: #E5E5E5;
-$c-text-primary: #131010;
-$c-text-secondary: #888888;
-$c-white: #FFFFFF;
-
-$c-lightgrey: #F0F0F0;
-$c-grey: #80808080;
-
-$c-footer: #6B6C70;
-
-
-$font-basic: 'Montserrat', sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
-
-/*Border radius*/
-
-$border-radius--standard: 8pt;
-$border-radius--rounded: 16pt;
-
-/* Komponenty */
-
-.button {
-    padding: 15px 45px;
-    border-radius: $border-radius--rounded;
-    background-color: $c-primary;
-    display: inline-block;
-    margin: 20px;
-    
-    &__title {
-        color: $c-white;
-        text-decoration: none;
-        font-weight: 600;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: $c-primary--onclick;
-    }
-
-    
-}
-
-.button__service {
-    background-color: $c-background-secondary;
-    height: 100px;
-    display: inline-block;
-    border-radius: $border-radius--rounded;
-
-}
-
-.service__card {
-    background-color: $c-lightgrey;
-    box-shadow: 2px 2px 2px $c-lightgrey;
-    border-radius: $border-radius--standard;
-}
-
-/*Konec stylování komponent*/
-
-/*Stylování header*/
-
-.header {
-    padding: 20px;
-    background-color: $c-text-primary;
-    
-    /*NASTAVIT JEN PROSTREDNIMU ODKAZU PADDING 5PX*/
-
-    &__item {       
-        padding: 5px 0;
-    } 
-
-    @media screen and (min-width: 560px) {
-        &__list {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-     
-        &__item {
-            padding: 0;
-        } 
-    }
-
-    
-    &__link {
-        text-decoration: none;
-        color: white; 
-        margin: 0;
-    }
-
-}
-
-/*Konec stylování header*/
-
 body {
-    font-family: $font-basic;
+    font-family: promenne.$font-basic;
     font-size: 16px;
     margin: 0;
     line-height: 1.6;
@@ -111,9 +21,16 @@ body {
 }
 
 
-.section__headline {
-    color: $c-primary;
+.section {
+    
+    &__headline {
+    color: promenne.$c-primary;
     font-size: 36px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
 }
 
 .section__title {
@@ -131,53 +48,8 @@ body {
         padding-left: 20px;
         margin-left: -5px;
     }
-    &__button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-/*Formulářové prvky*/
-
-.formfield {
-    max-width: 550px;
-    margin-bottom: 25px;
-
-
-    &__label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    &__input {
-        width: 100%;
-        outline: 0;
-        border-radius: $border-radius--standard;
-        font-size: 16px;
-        padding: 5px;
-        background-color:$c-lightgrey;
-        border: 0;
-
-        &:focus,
-        &:active {
-            outline: 0;
-            border: 1px solid $c-text-primary;
-        }
-
-    }
-
-
 
 }
-
-/*konec stylování formulářových prvků*/
-
-/**/
-
-
-
-
 
 
 
@@ -187,7 +59,7 @@ body {
     
     &__title {
         font-size: 36px;
-        color: $c-primary;
+        color: promenne.$c-primary;
         margin: 0;
         padding: 0;
     }
@@ -204,13 +76,13 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
-        border-radius: $border-radius--standard;
+        border-radius: promenne.$border-radius--standard;
         padding: 20px;
         
         
         &__caption,
         &__caption a {
-            color: $c-white;
+            color: promenne.$c-white;
             opacity: 0.8;
             font-size: 12px;
         }
@@ -226,25 +98,3 @@ body {
 }
 
 /*Konec stylování hero sekce*/
-
-
-
-
-
-
-/*Stylování patičky*/
-
-.footer {
-    background-color: $c-footer;
-    color: $c-white;
-    text-align: center;
-    height: 80px;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    &__body {
-        margin: 0;
-    }
-}
-
-/*Konec stylování patičky*/

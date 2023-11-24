@@ -1,0 +1,15 @@
+@use 'promenne';
+
+.footer {
+    background-color: promenne.$c-footer;
+    color: promenne.$c-white;
+    text-align: center;
+    height: 80px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    &__body {
+        margin: 0;
+    }
+}
+
