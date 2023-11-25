@@ -58,7 +58,7 @@
 }
 
 .button__service {
-  background-color: #E5E5E5;
+  background-color: #D8EBFC;
   box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5019607843);
   padding: 20px;
   line-height: 1.4;
@@ -77,6 +77,9 @@
   padding: 10px 20px 100px 10px;
   text-decoration: none;
   color: #131010;
+}
+.button__service:hover, .button__service:focus, .button__service:active {
+  background-color: #cbe4fa;
 }
 
 .arrow {
@@ -160,6 +163,7 @@ body {
   font-size: 24px;
 }
 
+/*Dílčí nadpisy v sekci Služby*/
 .service__title {
   font-size: 24px;
   font-weight: 600;
@@ -189,12 +193,21 @@ body {
 @media screen and (min-width: 760px) {
   .hero {
     height: 450px;
-    background-image: url(../IMAGES/cybersecurity_hero_small.jpg);
+    background-image: url(../IMAGES/cristiano-firmani-tmTidmpILWw-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    border-radius: 8pt;
     padding: 20px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+  }
+  .hero__title {
+    color: #FFFFFF;
+    text-align: center;
   }
   .hero__caption, .hero__caption a {
     color: #FFFFFF;
