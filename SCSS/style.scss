@@ -9,6 +9,11 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
+
+
+
+/*Stylování body a nadpisů*/
+
 body {
     font-family: promenne.$font-basic;
     font-size: 16px;
@@ -36,6 +41,15 @@ body {
 .section__title {
     font-size: 24px;
 }
+
+.service__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: promenne.$c-primary;
+    margin-top: 120px;
+}
+
+
 
 
 /*stylování homepage*/
