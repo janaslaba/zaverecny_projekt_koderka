@@ -99,7 +99,7 @@
 }
 
 .footer {
-  background-color: #6B6C70;
+  background-color: #131010;
   color: #FFFFFF;
   text-align: center;
   height: 80px;
@@ -143,16 +143,30 @@ html {
   box-sizing: inherit;
 }
 
-/*Stylování body a nadpisů*/
+/*Stylování body, kontaktni paticky a nadpisů*/
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   margin: 0;
   line-height: 1.6;
 }
 
 .main {
   padding: 20px;
+}
+
+.kontaktni__paticka {
+  margin: 0px;
+  padding: 20px 40px;
+  background-color: #D8EBFC;
+}
+.kontaktni__paticka__text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.kontaktni__paticka__text a {
+  color: #0E1BB7;
 }
 
 .section__headline {

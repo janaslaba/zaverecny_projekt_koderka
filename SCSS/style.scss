@@ -12,11 +12,11 @@ html { box-sizing: border-box; }
 
 
 
-/*Stylování body a nadpisů*/
+/*Stylování body, kontaktni paticky a nadpisů*/
 
 body {
     font-family: promenne.$font-basic;
-    font-size: 16px;
+    font-size: 24px;
     margin: 0;
     line-height: 1.6;
 }
@@ -25,6 +25,20 @@ body {
     padding: 20px;
 }
 
+.kontaktni__paticka {
+    margin: 0px;
+    padding: 20px 40px;
+    background-color: promenne.$c-background-tertiary;
+
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+.kontaktni__paticka__text a {
+    color: promenne.$c-primary;
+}
 
 .section {
     
