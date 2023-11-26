@@ -3,17 +3,20 @@
 /* Komponenty */
 
 .button {
-    padding: 15px 45px;
     border-radius: promenne.$border-radius--rounded;
     background-color: promenne.$c-primary;
     display: inline-block;
     margin: 20px;
     
     &__title {
+        padding: 15px 45px;
         color: promenne.$c-white;
         text-decoration: none;
         font-weight: 600;
+        text-shadow: 2px 2px 0.9 promenne.$c-text-secondary;
+        display: block;
     }
+
     &:hover,
     &:focus,
     &:active {
@@ -39,19 +42,19 @@
 
 .button__service {
     background-color: promenne.$c-background-tertiary;
-    box-shadow: 2px 2px 2px promenne.$c-grey;
     padding: 20px;
     line-height: 1.4;
     height: 220px;
     border-radius: promenne.$border-radius--rounded;
     position: relative;
     max-height: fit-content;
-    box-shadow: 1px 1px 8px promenne.$c-boxshadow;
+    box-shadow: 2px 2px 2px promenne.$c-boxshadow;
 
     &__title {
         display: block;
         font-size: 24px;
         font-weight: 600;
+        text-shadow: 2px 2px 1 promenne.$c-text-secondary;
         margin: 0;
         padding: 10px 20px 100px 10px;
         text-decoration: none;
@@ -71,6 +74,7 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+    filter: drop-shadow(2px 2px 2px promenne.$c-text-secondary);
 
     @media screen and (min-width:560px) {
         &--crossroad {

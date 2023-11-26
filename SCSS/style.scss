@@ -40,6 +40,7 @@ body {
 
 .section__title {
     font-size: 24px;
+    text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
 }
 
 /*Dílčí nadpisy v sekci Služby*/
@@ -48,6 +49,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: promenne.$c-primary;
+    text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
     margin-top: 120px;
 }
 
@@ -59,6 +61,8 @@ body {
 .offer {
     &__title {
         margin: 20px 0;
+        text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
+
     }
     &__list {
         padding-left: 20px;
@@ -78,6 +82,7 @@ body {
         color: promenne.$c-primary;
         margin: 0;
         padding: 0;
+        text-shadow: 2px 2px 0.9 promenne.$c-text-secondary;
     }
 
     &__caption {
@@ -86,10 +91,10 @@ body {
 
     
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 560px) {
           
         height: 450px;
-        background-image: url(../IMAGES/cristiano-firmani-tmTidmpILWw-unsplash.jpg);
+        background-image: url(../IMAGES/praha_medium.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -120,7 +125,9 @@ body {
             right: 10px;
         }
     }
-    
+    @media screen and (min-width: 960px) {
+        background-image: url(../IMAGES/praha_large.jpg);
+    }    
 }
 
 /*Konec stylování hero sekce*/

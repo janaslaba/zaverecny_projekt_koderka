@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* barvy */
+/*$c-arrow-shadow: #ecdda8;*/
 /* font */
 /*border radius*/
 .header {
@@ -29,16 +30,18 @@
 /*Konec stylování header*/
 /* Komponenty */
 .button {
-  padding: 15px 45px;
   border-radius: 16pt;
   background-color: #0E1BB7;
   display: inline-block;
   margin: 20px;
 }
 .button__title {
+  padding: 15px 45px;
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 600;
+  text-shadow: 2px 2px 0.9 #888888;
+  display: block;
 }
 .button:hover, .button:focus, .button:active {
   background-color: #0B17A5;
@@ -59,7 +62,6 @@
 
 .button__service {
   background-color: #D8EBFC;
-  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5019607843);
   padding: 20px;
   line-height: 1.4;
   height: 220px;
@@ -67,12 +69,13 @@
   position: relative;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  box-shadow: 1px 1px 8px #D4DDFB;
+  box-shadow: 2px 2px 2px #D4DDFB;
 }
 .button__service__title {
   display: block;
   font-size: 24px;
   font-weight: 600;
+  text-shadow: 2px 2px 1 #888888;
   margin: 0;
   padding: 10px 20px 100px 10px;
   text-decoration: none;
@@ -87,6 +90,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  filter: drop-shadow(2px 2px 2px #888888);
 }
 @media screen and (min-width: 560px) {
   .arrow--crossroad {
@@ -161,6 +165,7 @@ body {
 
 .section__title {
   font-size: 24px;
+  text-shadow: 2px 2px 0.8 #888888;
 }
 
 /*Dílčí nadpisy v sekci Služby*/
@@ -168,12 +173,14 @@ body {
   font-size: 24px;
   font-weight: 600;
   color: #0E1BB7;
+  text-shadow: 2px 2px 0.8 #888888;
   margin-top: 120px;
 }
 
 /*stylování homepage*/
 .offer__title {
   margin: 20px 0;
+  text-shadow: 2px 2px 0.8 #888888;
 }
 .offer__list {
   padding-left: 20px;
@@ -186,14 +193,15 @@ body {
   color: #0E1BB7;
   margin: 0;
   padding: 0;
+  text-shadow: 2px 2px 0.9 #888888;
 }
 .hero__caption {
   display: none;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   .hero {
     height: 450px;
-    background-image: url(../IMAGES/cristiano-firmani-tmTidmpILWw-unsplash.jpg);
+    background-image: url(../IMAGES/praha_medium.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -219,6 +227,11 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .hero {
+    background-image: url(../IMAGES/praha_large.jpg);
   }
 }
 
