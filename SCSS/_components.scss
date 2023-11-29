@@ -2,6 +2,22 @@
 
 /* Komponenty */
 
+.arrow {
+    fill: promenne.$c-primary;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    filter: drop-shadow(2px 2px 2px promenne.$c-text-secondary);
+    transition: transform 0.5s;
+
+    @media screen and (min-width:560px) {
+        &--crossroad {
+            transform: rotateZ(90deg);
+        }
+    }
+}
+
+
 .button {
     border-radius: promenne.$border-radius--rounded;
     background-color: promenne.$c-primary;
@@ -21,6 +37,13 @@
     &:focus,
     &:active {
         background-color: promenne.$c-primary--onclick;
+
+        .arrow {
+
+            fill: tomato;
+            /*transform: scale(1.2);*/
+            /*fill: promenne.$c-text-primary;*/
+        }
     }
 
     &--centered {
@@ -29,6 +52,21 @@
     }
     
 }
+
+/*
+.button:hover {
+    .arrow {
+        animation: pohyb (5s);
+    }
+}
+
+
+@keyframes pohyb {
+    0% {transform: translateY(20px);}
+    50% {transform: scale (1.5);}
+    100% {transform: translateY(-20px);}
+}
+*/
 
 .service__card {
     border-radius: promenne.$border-radius--standard;
@@ -69,17 +107,4 @@
     }
 }
 
-.arrow {
-    fill: promenne.$c-primary;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    filter: drop-shadow(2px 2px 2px promenne.$c-text-secondary);
-
-    @media screen and (min-width:560px) {
-        &--crossroad {
-            transform: rotateZ(90deg);
-        }
-    }
-}
 

@@ -29,6 +29,20 @@
 
 /*Konec stylování header*/
 /* Komponenty */
+.arrow {
+  fill: #0E1BB7;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  filter: drop-shadow(2px 2px 2px #888888);
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 560px) {
+  .arrow--crossroad {
+    transform: rotateZ(90deg);
+  }
+}
+
 .button {
   border-radius: 16pt;
   background-color: #0E1BB7;
@@ -46,11 +60,30 @@
 .button:hover, .button:focus, .button:active {
   background-color: #0B17A5;
 }
+.button:hover .arrow, .button:focus .arrow, .button:active .arrow {
+  fill: tomato;
+  /*transform: scale(1.2);*/
+  /*fill: promenne.$c-text-primary;*/
+}
 .button--centered {
   width: 100%;
   text-align: center;
 }
 
+/*
+.button:hover {
+    .arrow {
+        animation: pohyb (5s);
+    }
+}
+
+
+@keyframes pohyb {
+    0% {transform: translateY(20px);}
+    50% {transform: scale (1.5);}
+    100% {transform: translateY(-20px);}
+}
+*/
 .service__card {
   border-radius: 8pt;
   display: grid;
@@ -83,19 +116,6 @@
 }
 .button__service:hover, .button__service:focus, .button__service:active {
   background-color: #cbe4fa;
-}
-
-.arrow {
-  fill: #0E1BB7;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  filter: drop-shadow(2px 2px 2px #888888);
-}
-@media screen and (min-width: 560px) {
-  .arrow--crossroad {
-    transform: rotateZ(90deg);
-  }
 }
 
 .footer {
