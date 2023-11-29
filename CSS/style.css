@@ -60,30 +60,11 @@
 .button:hover, .button:focus, .button:active {
   background-color: #0B17A5;
 }
-.button:hover .arrow, .button:focus .arrow, .button:active .arrow {
-  fill: tomato;
-  /*transform: scale(1.2);*/
-  /*fill: promenne.$c-text-primary;*/
-}
 .button--centered {
   width: 100%;
   text-align: center;
 }
 
-/*
-.button:hover {
-    .arrow {
-        animation: pohyb (5s);
-    }
-}
-
-
-@keyframes pohyb {
-    0% {transform: translateY(20px);}
-    50% {transform: scale (1.5);}
-    100% {transform: translateY(-20px);}
-}
-*/
 .service__card {
   border-radius: 8pt;
   display: grid;
@@ -118,6 +99,16 @@
   background-color: #cbe4fa;
 }
 
+.button__service:hover .arrow {
+  transform: scale(1.5);
+}
+
+/*.arrow {
+
+            fill: tomato;
+            /*transform: scale(1.2);*/
+/*fill: promenne.$c-text-primary;
+}*/
 .footer {
   background-color: #131010;
   color: #FFFFFF;

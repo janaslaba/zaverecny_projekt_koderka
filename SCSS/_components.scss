@@ -37,13 +37,6 @@
     &:focus,
     &:active {
         background-color: promenne.$c-primary--onclick;
-
-        .arrow {
-
-            fill: tomato;
-            /*transform: scale(1.2);*/
-            /*fill: promenne.$c-text-primary;*/
-        }
     }
 
     &--centered {
@@ -53,20 +46,6 @@
     
 }
 
-/*
-.button:hover {
-    .arrow {
-        animation: pohyb (5s);
-    }
-}
-
-
-@keyframes pohyb {
-    0% {transform: translateY(20px);}
-    50% {transform: scale (1.5);}
-    100% {transform: translateY(-20px);}
-}
-*/
 
 .service__card {
     border-radius: promenne.$border-radius--standard;
@@ -108,3 +87,13 @@
 }
 
 
+.button__service:hover .arrow {
+    transform: scale(1.5);
+}
+
+/*.arrow {
+
+            fill: tomato;
+            /*transform: scale(1.2);*/
+            /*fill: promenne.$c-text-primary;
+        }*/
