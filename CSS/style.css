@@ -39,12 +39,20 @@
 }
 @media screen and (min-width: 560px) {
   .arrow--crossroad {
-    transform: rotateZ(90deg);
+    rotate: 90deg;
   }
 }
 
+@keyframes crossroad {
+  1% {
+    transform: rotateZ("90deg");
+  }
+  100% {
+    transform: scale(1.5) rotateZ("0deg");
+  }
+}
 .button {
-  border-radius: 16pt;
+  border-radius: 20px;
   background-color: #0E1BB7;
   display: inline-block;
   margin: 20px;
@@ -66,7 +74,7 @@
 }
 
 .service__card {
-  border-radius: 8pt;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: auto;
@@ -79,7 +87,7 @@
   padding: 20px;
   line-height: 1.4;
   height: 220px;
-  border-radius: 16pt;
+  border-radius: 20px;
   position: relative;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -103,12 +111,10 @@
   transform: scale(1.5);
 }
 
-/*.arrow {
+.button__service--crossroad:hover .arrow--crossroad {
+  transform: scale(1.5) rotateZ("0deg");
+}
 
-            fill: tomato;
-            /*transform: scale(1.2);*/
-/*fill: promenne.$c-text-primary;
-}*/
 .footer {
   background-color: #131010;
   color: #FFFFFF;
@@ -133,7 +139,7 @@
 .formfield__input {
   width: 100%;
   outline: 0;
-  border-radius: 8pt;
+  border-radius: 10px;
   font-size: 16px;
   padding: 5px;
   background-color: #F0F0F0;
@@ -182,20 +188,20 @@ body {
 
 .section__headline {
   color: #0E1BB7;
-  font-size: 36px;
+  font-size: 42px;
 }
 .section__description {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .section__title {
-  font-size: 24px;
+  font-size: 38px;
   text-shadow: 2px 2px 0.8 #888888;
 }
 
 /*Dílčí nadpisy v sekci Služby*/
 .service__title {
-  font-size: 24px;
+  font-size: 38px;
   font-weight: 600;
   color: #0E1BB7;
   text-shadow: 2px 2px 0.8 #888888;
@@ -214,7 +220,7 @@ body {
 
 /*Stylování hero sekce*/
 .hero__title {
-  font-size: 36px;
+  font-size: 60px;
   color: #0E1BB7;
   margin: 0;
   padding: 0;
@@ -223,15 +229,16 @@ body {
 .hero__caption {
   display: none;
 }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 750px) {
   .hero {
-    height: 450px;
-    background-image: url(../IMAGES/praha_medium.jpg);
+    min-height: 450px;
+    background-image: url(../IMAGES/praha_small.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     padding: 20px;
     display: grid;
+    grid-template-columns: fit-content;
     justify-items: center;
     align-items: center;
     margin-left: -20px;
@@ -256,7 +263,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .hero {
-    background-image: url(../IMAGES/praha_large.jpg);
+    background-image: url(../IMAGES/praha_medium.jpg);
   }
 }
 

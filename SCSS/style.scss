@@ -44,23 +44,23 @@ body {
     
     &__headline {
     color: promenne.$c-primary;
-    font-size: 36px;
+    font-size: 42px;
     }
 
     &__description {
-        font-size: 18px;
+        font-size: 24px;
     }
 }
 
 .section__title {
-    font-size: 24px;
+    font-size: 38px;
     text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
 }
 
 /*Dílčí nadpisy v sekci Služby*/
 
 .service__title {
-    font-size: 24px;
+    font-size: 38px;
     font-weight: 600;
     color: promenne.$c-primary;
     text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
@@ -92,7 +92,7 @@ body {
 .hero {
 
     &__title {
-        font-size: 36px;
+        font-size: 60px;
         color: promenne.$c-primary;
         margin: 0;
         padding: 0;
@@ -105,15 +105,16 @@ body {
 
     
 
-    @media screen and (min-width: 560px) {
+    @media screen and (min-width: 750px) {
           
-        height: 450px;
-        background-image: url(../IMAGES/praha_medium.jpg);
+        min-height: 450px;
+        background-image: url(../IMAGES/praha_small.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
         padding: 20px;
         display: grid;
+        grid-template-columns: fit-content;
         justify-items: center;
         align-items: center;
         margin-left: -20px;
@@ -123,6 +124,7 @@ body {
         &__title {
             color: promenne.$c-white;
             text-align: center;
+
         }
 
         &__caption,
@@ -140,7 +142,7 @@ body {
         }
     }
     @media screen and (min-width: 960px) {
-        background-image: url(../IMAGES/praha_large.jpg);
+        background-image: url(../IMAGES/praha_medium.jpg);
     }    
 }
 
