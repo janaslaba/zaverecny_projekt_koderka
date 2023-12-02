@@ -52,6 +52,10 @@ body {
     }
 }
 
+.kontaktni__paticka .section__headline {
+    margin-top: 0;
+}
+
 .section__title {
     font-size: 38px;
     text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
@@ -64,7 +68,7 @@ body {
     font-weight: 600;
     color: promenne.$c-primary;
     text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
-    margin-top: 120px;
+    margin-top: 0;
 }
 
 
