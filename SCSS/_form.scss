@@ -22,7 +22,7 @@
 
         &:focus,
         &:active {
-            outline: 0;
+            outline: promenne.$c-primary;
             border: 1px solid promenne.$c-text-primary;
         }
 
