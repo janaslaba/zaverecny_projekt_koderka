@@ -3,13 +3,21 @@
 .footer {
     background-color: promenne.$c-footer;
     color: promenne.$c-white;
+    line-height: 1.2;
+    font-size: 16px;
     text-align: center;
-    height: 80px;
     display: grid;
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     align-content: center;
+    
     &__body {
         margin: 0;
+    }
+    
+    &__copyright {
+        grid-column: 1 / -1;
+        margin-top: 20px;
     }
 }
 

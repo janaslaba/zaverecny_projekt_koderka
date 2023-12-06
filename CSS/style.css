@@ -4,8 +4,14 @@
 /* font */
 /*border radius*/
 .header {
-  padding: 20px;
   background-color: #131010;
+  font-size: 18px;
+}
+.header__kontejner {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 .header__list {
   display: none;
@@ -15,6 +21,9 @@
   color: #FFFFFF;
   margin: 0;
   padding: 20px;
+}
+.header__link:hover, .header__link:active, .header__link:focus {
+  color: #cbe4fa;
 }
 
 .menu {
@@ -43,6 +52,9 @@
   text-decoration: none;
   color: #FFFFFF;
 }
+.menu__link:hover, .menu__link:active, .menu__link:focus {
+  color: #cbe4fa;
+}
 .menu__toggler {
   cursor: pointer;
   color: #FFFFFF;
@@ -54,7 +66,7 @@
   }
 }
 @media screen and (min-width: 850px) {
-  .header {
+  .header__kontejner {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -102,19 +114,11 @@
   }
 }
 
-@keyframes crossroad {
-  1% {
-    transform: rotateZ("90deg");
-  }
-  100% {
-    transform: scale(1.5) rotateZ("0deg");
-  }
-}
 .button {
   border-radius: 20px;
   background-color: #0E1BB7;
   display: inline-block;
-  margin: 20px;
+  margin: 40px;
 }
 .button__title {
   padding: 15px 45px;
@@ -132,12 +136,16 @@
   text-align: center;
 }
 
+/*Komponenty v sekci Služby*/
 .service__box {
   background-color: #f5f8fa;
   border-radius: 10px;
   padding: 20px;
   margin-top: 120px;
-  box-shadow: 2px 2px 2px 1px #b4c0ca;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.service__box:hover, .service__box:active, .service__box:focus {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 9px 25px 0 rgba(0, 0, 0, 0.22);
 }
 
 .service__card {
@@ -175,24 +183,46 @@
 }
 
 .button__service:hover .arrow {
-  transform: scale(1.5);
+  transform: scale(1.4);
+}
+
+.button__service:active .arrow {
+  transform: scale(1.4);
+}
+
+.button__service:focus .arrow {
+  transform: scale(1.4);
 }
 
 .button__service--crossroad:hover .arrow--crossroad {
   transform: scale(1.5) rotateZ("0deg");
 }
 
+.button__service--crossroad:active .arrow--crossroad {
+  transform: scale(1.5) rotateZ("0deg");
+}
+
+.button__service--crossroad:focus .arrow--crossroad {
+  transform: scale(1.5) rotateZ("0deg");
+}
+
 .footer {
   background-color: #131010;
   color: #FFFFFF;
+  line-height: 1.2;
+  font-size: 16px;
   text-align: center;
-  height: 80px;
   display: grid;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   align-content: center;
 }
 .footer__body {
   margin: 0;
+}
+.footer__copyright {
+  grid-column: 1/-1;
+  margin-top: 20px;
 }
 
 .formfield {
@@ -237,16 +267,25 @@ body {
 
 .main {
   padding: 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/*Stylovani kontaktni paticky*/
 .kontaktni__paticka {
   margin: 0px;
-  padding: 20px 40px;
   background-color: #D8EBFC;
 }
 .kontaktni__paticka__text {
   font-size: 24px;
   font-weight: 600;
+}
+.kontaktni-kontejner {
+  padding: 0 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .kontaktni__paticka__text a {
@@ -310,7 +349,6 @@ body {
   background-image: url(../IMAGES/praha_small.jpg);
   margin-right: -20px;
   margin-left: -20px;
-  margin-top: -20px;
   padding: 20px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -318,6 +356,7 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  border-radius: 10px;
 }
 .hero__title {
   font-size: 36px;

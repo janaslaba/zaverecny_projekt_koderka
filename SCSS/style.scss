@@ -23,18 +23,34 @@ body {
 
 .main {
     padding: 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.kontaktni__paticka {
-    margin: 0px;
-    padding: 20px 40px;
-    background-color: promenne.$c-background-tertiary;
 
-    &__text {
-        font-size: 24px;
-        font-weight: 600;
+/*Stylovani kontaktni paticky*/
+
+.kontaktni { 
+    &__paticka {
+        margin: 0px;
+        background-color: promenne.$c-background-tertiary;
+        
+        &__text {
+            font-size: 24px;
+            font-weight: 600;
+        }
     }
+    &-kontejner {
+        padding: 0 40px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
+
+
 
 .kontaktni__paticka__text a {
     color: promenne.$c-primary;
@@ -43,8 +59,8 @@ body {
 .section {
     
     &__headline {
-    color: promenne.$c-primary;
-    font-size: 34px;
+        color: promenne.$c-primary;
+        font-size: 34px;
     }
 
     &__description {
@@ -67,12 +83,14 @@ body {
 
     }    
 }
+
 .kontaktni__paticka .section__headline {
     margin-top: 0;
 }
 
 
 /*Dílčí nadpisy v sekci Služby*/
+
 
 .service__title {
     font-size: 38px;
@@ -115,7 +133,7 @@ body {
     background-image: url(../IMAGES/praha_small.jpg);
     margin-right: -20px;
     margin-left: -20px;
-    margin-top: -20px;
+    
     padding: 20px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,6 +141,7 @@ body {
     display: grid;
     justify-items: center;
     align-items: center;
+    border-radius: promenne.$border-radius--standard;
 
     &__title {
         font-size: 36px;

@@ -19,16 +19,11 @@
     }
 }
 
-@keyframes crossroad {
-    1% {transform: rotateZ("90deg");}
-    100% {transform: scale(1.5) rotateZ("0deg");}
-}
-
 .button {
     border-radius: promenne.$border-radius--rounded;
     background-color: promenne.$c-primary;
     display: inline-block;
-    margin: 20px;
+    margin: 40px;
     
     &__title {
         padding: 15px 45px;
@@ -52,12 +47,22 @@
     
 }
 
+
+/*Komponenty v sekci Služby*/
+
+
 .service__box {
     background-color: promenne.$c-background-service-box;
     border-radius: promenne.$border-radius--standard;
     padding: 20px;
     margin-top: 120px;
-    box-shadow: 2px 2px 2px 1px promenne.$c-boxshadow;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 9px 25px 0 rgba(0, 0, 0, 0.22);
+    }
 
 }
 
@@ -98,13 +103,30 @@
     &:active {
         background-color: promenne.$c-background-tertiary--onclick;
     }
+    
 }
 
 
 .button__service:hover .arrow {
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
-.button__service--crossroad:hover .arrow--crossroad{
+.button__service:active .arrow {
+    transform: scale(1.4);
+}
+
+.button__service:focus .arrow {
+    transform: scale(1.4);
+}
+
+.button__service--crossroad:hover .arrow--crossroad {
+    transform: scale(1.5) rotateZ('0deg');
+}
+
+.button__service--crossroad:active .arrow--crossroad {
+    transform: scale(1.5) rotateZ('0deg');
+}
+
+.button__service--crossroad:focus .arrow--crossroad {
     transform: scale(1.5) rotateZ('0deg');
 }

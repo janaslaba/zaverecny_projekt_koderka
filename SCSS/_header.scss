@@ -1,8 +1,15 @@
 @use 'promenne';
 
 .header {
-    padding: 20px;
     background-color: promenne.$c-text-primary;
+	font-size: 18px;
+
+	&__kontejner {
+		max-width: 1400px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+	}
 
 	&__list {
 		display: none;
@@ -13,6 +20,12 @@
 		color: promenne.$c-white; 
 		margin: 0;
 		padding: 20px;
+	}
+
+	&__link:hover,
+	&__link:active,
+	&__link:focus {
+		color: promenne.$c-background-tertiary--onclick;
 	}
 
 }
@@ -49,6 +62,13 @@
 		color: promenne.$c-white;
 	}
 
+	&__link:hover,
+	&__link:active,
+	&__link:focus {
+		color: promenne.$c-background-tertiary--onclick;
+	}
+
+
 	&__toggler {
 		cursor: pointer;
 		color: promenne.$c-white;
@@ -67,17 +87,20 @@
 @media screen and (min-width: 850px) {
 	
 	.header {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: 20px;
+	
+		&__kontejner {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 20px;
+		}
+
+	 	&__list {
+			display: block;
+			min-width: 400px;
+		}
 	}
 
-	.header__list {
-		display: block;
-		min-width: 400px;
-	}
-	
 	.menu {
 		display: flex;
 		justify-content: end;
