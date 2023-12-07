@@ -17,13 +17,13 @@
         border-radius: promenne.$border-radius--standard;
         font-size: 24px;
         padding: 5px;
-        background-color: promenne.$c-lightgrey;
+        background-color: promenne.$c-white;
         border: 0;
 
         &:focus,
         &:active {
             outline: promenne.$c-primary;
-            border: 1px solid promenne.$c-text-primary;
+            border: 1px solid promenne.$c-primary;
         }
 
     }

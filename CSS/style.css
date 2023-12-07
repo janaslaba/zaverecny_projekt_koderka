@@ -97,7 +97,7 @@
   }
 }
 /*Konec stylování header*/
-/* Komponenty */
+/* Šipky v sekci Služby */
 .arrow {
   fill: #0E1BB7;
   position: absolute;
@@ -114,6 +114,7 @@
   }
 }
 
+/*Stylovani tlacitka*/
 .button {
   border-radius: 20px;
   background-color: #0E1BB7;
@@ -138,7 +139,6 @@
 
 /*Komponenty v sekci Služby*/
 .service__box {
-  background-color: #f5f8fa;
   border-radius: 10px;
   padding: 20px;
   margin-top: 120px;
@@ -239,12 +239,12 @@
   border-radius: 10px;
   font-size: 24px;
   padding: 5px;
-  background-color: #F0F0F0;
+  background-color: #FFFFFF;
   border: 0;
 }
 .formfield__input:focus, .formfield__input:active {
   outline: #0E1BB7;
-  border: 1px solid #131010;
+  border: 1px solid #0E1BB7;
 }
 
 /*konec stylování formulářových prvků*/
@@ -257,12 +257,13 @@ html {
   box-sizing: inherit;
 }
 
-/*Stylování body, kontaktni paticky a nadpisů*/
+/*Stylování body, textu a nadpisů*/
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   margin: 0;
   line-height: 1.6;
+  background-color: #f5f8fa;
 }
 
 .main {
@@ -272,10 +273,15 @@ body {
   margin-right: auto;
 }
 
+.text--bold {
+  font-weight: 600;
+}
+
 /*Stylovani kontaktni paticky*/
 .kontaktni__paticka {
   margin: 0px;
   background-color: #D8EBFC;
+  padding-top: 20px;
 }
 .kontaktni__paticka__text {
   font-size: 24px;
@@ -290,6 +296,10 @@ body {
 
 .kontaktni__paticka__text a {
   color: #0E1BB7;
+}
+
+.kontaktni__paticka .section__headline {
+  margin-top: 0;
 }
 
 .section__headline {
@@ -310,10 +320,6 @@ body {
   .section__title {
     font-size: 38px;
   }
-}
-
-.kontaktni__paticka .section__headline {
-  margin-top: 0;
 }
 
 /*Dílčí nadpisy v sekci Služby*/
@@ -347,16 +353,16 @@ body {
 /*Stylování hero sekce*/
 .hero {
   background-image: url(../IMAGES/praha_small.jpg);
-  margin-right: -20px;
-  margin-left: -20px;
   padding: 20px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   display: grid;
   justify-items: center;
   align-items: center;
   border-radius: 10px;
+  overflow: hidden;
 }
 .hero__title {
   font-size: 36px;

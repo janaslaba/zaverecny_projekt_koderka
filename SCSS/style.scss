@@ -12,13 +12,14 @@ html { box-sizing: border-box; }
 
 
 
-/*Stylování body, kontaktni paticky a nadpisů*/
+/*Stylování body, textu a nadpisů*/
 
 body {
     font-family: promenne.$font-basic;
     font-size: 24px;
     margin: 0;
     line-height: 1.6;
+    background-color: promenne.$c-background-service-box;
 }
 
 .main {
@@ -28,6 +29,9 @@ body {
     margin-right: auto;
 }
 
+.text--bold {
+    font-weight: 600;
+}
 
 /*Stylovani kontaktni paticky*/
 
@@ -35,6 +39,7 @@ body {
     &__paticka {
         margin: 0px;
         background-color: promenne.$c-background-tertiary;
+        padding-top: 20px;
         
         &__text {
             font-size: 24px;
@@ -54,6 +59,10 @@ body {
 
 .kontaktni__paticka__text a {
     color: promenne.$c-primary;
+}
+
+.kontaktni__paticka .section__headline {
+    margin-top: 0;
 }
 
 .section {
@@ -84,9 +93,7 @@ body {
     }    
 }
 
-.kontaktni__paticka .section__headline {
-    margin-top: 0;
-}
+
 
 
 /*Dílčí nadpisy v sekci Služby*/
@@ -131,17 +138,16 @@ body {
 
 .hero {
     background-image: url(../IMAGES/praha_small.jpg);
-    margin-right: -20px;
-    margin-left: -20px;
-    
     padding: 20px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     display: grid;
     justify-items: center;
     align-items: center;
     border-radius: promenne.$border-radius--standard;
+    overflow: hidden;
 
     &__title {
         font-size: 36px;
