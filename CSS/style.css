@@ -11,7 +11,7 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 15px 40px;
 }
 .header__list {
   display: none;
@@ -20,7 +20,7 @@
   text-decoration: none;
   color: #FFFFFF;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 .header__link:hover, .header__link:active, .header__link:focus {
   color: #cbe4fa;
@@ -101,12 +101,11 @@
 .arrow {
   fill: #0E1BB7;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   filter: drop-shadow(2px 2px 2px #888888);
   transition: transform 0.5s;
-  margin: 0;
-  padding: 0;
+  padding: 2px;
 }
 @media screen and (min-width: 560px) {
   .arrow--crossroad {
@@ -141,7 +140,7 @@
 .service__box {
   border-radius: 10px;
   padding: 20px;
-  margin-top: 120px;
+  margin-top: 20%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .service__box:hover, .service__box:active, .service__box:focus {
@@ -157,16 +156,21 @@
   margin: 60px 0;
 }
 
+.service__crossroad {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 .button__service {
   background-color: #D8EBFC;
-  padding: 20px;
+  padding: 10px;
   line-height: 1.4;
-  height: 220px;
+  min-height: 220px;
   border-radius: 20px;
   position: relative;
   max-height: -moz-fit-content;
   max-height: fit-content;
   box-shadow: 2px 2px 2px #b4c0ca;
+  cursor: pointer;
 }
 .button__service__title {
   display: block;
@@ -174,12 +178,37 @@
   font-weight: 600;
   text-shadow: 2px 2px 1 #888888;
   margin: 0;
-  padding: 10px 20px 100px 10px;
+  padding: 20px;
   text-decoration: none;
   color: #131010;
+  flex: 0 0 75%;
+}
+.button__service__image {
+  margin: 5px;
 }
 .button__service:hover, .button__service:focus, .button__service:active {
   background-color: #cbe4fa;
+}
+.button__service--crossroad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  .button__service--crossroad {
+    flex-direction: row;
+  }
+  .button__service__image {
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button__service--crossroad {
+    flex-direction: column;
+  }
 }
 
 .button__service:hover .arrow {
@@ -216,6 +245,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   align-content: center;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 .footer__body {
   margin: 0;

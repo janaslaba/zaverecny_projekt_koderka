@@ -5,12 +5,11 @@
 .arrow {
     fill: promenne.$c-primary;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     filter: drop-shadow(2px 2px 2px promenne.$c-text-secondary);
     transition: transform 0.5s;
-    margin: 0;
-    padding: 0;
+    padding: 2px;
 
     @media screen and (min-width:560px) {
         &--crossroad {
@@ -18,7 +17,6 @@
         }
     }
 }
-
 
 /*Stylovani tlacitka*/
 
@@ -58,7 +56,7 @@
 .service__box {
     border-radius: promenne.$border-radius--standard;
     padding: 20px;
-    margin-top: 120px;
+    margin-top: 20%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     &:hover,
@@ -70,24 +68,30 @@
 }
 
 .service__card {
+
     border-radius: promenne.$border-radius--standard;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: auto;
     gap: 20px;
     margin: 60px 0;
-    
+     
+}
+
+.service__crossroad {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .button__service {
     background-color: promenne.$c-background-tertiary;
-    padding: 20px;
+    padding: 10px;
     line-height: 1.4;
-    height: 220px;
+    min-height: 220px;
     border-radius: promenne.$border-radius--rounded;
     position: relative;
     max-height: fit-content;
     box-shadow: 2px 2px 2px promenne.$c-boxshadow;
+    cursor: pointer;
 
     &__title {
         display: block;
@@ -95,10 +99,15 @@
         font-weight: 600;
         text-shadow: 2px 2px 1 promenne.$c-text-secondary;
         margin: 0;
-        padding: 10px 20px 100px 10px;
+        padding: 20px;
         text-decoration: none;
         color: promenne.$c-text-primary;
+        flex: 0 0 75%;
         
+    }
+
+    &__image {
+        margin: 5px;
     }
 
     &:hover,
@@ -107,6 +116,32 @@
         background-color: promenne.$c-background-tertiary--onclick;
     }
     
+    &--crossroad {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    @media screen and (min-width: 700px) {
+        
+        &--crossroad {
+            flex-direction: row;
+        }   
+
+        &__image {
+            justify-self: center;
+            align-self: center;
+            margin: 10px;
+        }
+
+    }
+    @media screen and (min-width: 1200px) {
+        &--crossroad {
+            flex-direction: column;
+        }
+    }    
 }
 
 

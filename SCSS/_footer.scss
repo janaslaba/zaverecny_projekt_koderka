@@ -10,6 +10,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     align-content: center;
+    padding-left: 3%;
+    padding-right: 3%;
     
     &__body {
         margin: 0;

@@ -3,12 +3,12 @@
 .header {
     background-color: promenne.$c-text-primary;
 	font-size: 18px;
-
+	
 	&__kontejner {
 		max-width: 1400px;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 20px;
+		padding: 15px 40px;
 	}
 
 	&__list {
@@ -19,7 +19,7 @@
 		text-decoration: none;
 		color: promenne.$c-white; 
 		margin: 0;
-		padding: 20px;
+		padding: 0;
 	}
 
 	&__link:hover,
