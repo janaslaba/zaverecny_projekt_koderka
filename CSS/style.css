@@ -92,6 +92,9 @@
     border-bottom: 0px;
     background-color: #131010;
   }
+  .menu__item:first-child {
+    display: none;
+  }
   .menu__link {
     color: #FFFFFF;
   }
@@ -162,7 +165,7 @@
 
 .button__service {
   background-color: #D8EBFC;
-  padding: 10px;
+  padding: 20px;
   line-height: 1.4;
   min-height: 220px;
   border-radius: 20px;
@@ -292,6 +295,7 @@ html {
 /*Stylování body, textu a nadpisů*/
 body {
   font-family: "Montserrat", sans-serif;
+  color: #131010;
   font-size: 24px;
   margin: 0;
   line-height: 1.6;
@@ -362,8 +366,12 @@ body {
   text-shadow: 2px 2px 0.8 #888888;
   margin-top: 0;
 }
+.service__subtitle {
+  font-weight: 600;
+}
 
 /*stylování homepage*/
+/* Nabídka služeb na homepage*/
 .offer__title {
   margin: 20px 0;
   text-shadow: 2px 2px 0.8 #888888;
@@ -372,6 +380,7 @@ body {
 .offer__list {
   padding-left: 20px;
   margin-left: -5px;
+  flex: 0 0 75%;
 }
 @media screen and (min-width: 800px) {
   .offer {
@@ -379,6 +388,22 @@ body {
   }
   .offer__title {
     font-size: 38px;
+  }
+}
+
+.homepage__image {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .homepage__kontejner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .homepage__kontejner .homepage__image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center;
   }
 }
 

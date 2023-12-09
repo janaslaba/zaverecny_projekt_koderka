@@ -16,6 +16,7 @@ html { box-sizing: border-box; }
 
 body {
     font-family: promenne.$font-basic;
+    color: promenne.$c-text-primary;
     font-size: 24px;
     margin: 0;
     line-height: 1.6;
@@ -65,6 +66,8 @@ body {
     margin-top: 0;
 }
 
+
+
 .section {
     
     &__headline {
@@ -99,18 +102,25 @@ body {
 /*Dílčí nadpisy v sekci Služby*/
 
 
-.service__title {
-    font-size: 38px;
-    font-weight: 600;
-    color: promenne.$c-primary;
-    text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
-    margin-top: 0;
+.service {
+    
+    &__title {
+        font-size: 38px;
+        font-weight: 600;
+        color: promenne.$c-primary;
+        text-shadow: 2px 2px 0.8 promenne.$c-text-secondary;
+        margin-top: 0;
+    }
+    &__subtitle {
+        font-weight: 600;
+    }
 }
 
 
-
-
 /*stylování homepage*/
+
+
+/* Nabídka služeb na homepage*/
 
 .offer {
     &__title {
@@ -122,7 +132,9 @@ body {
     &__list {
         padding-left: 20px;
         margin-left: -5px;
+        flex: 0 0 75%;
     }
+
     @media screen and (min-width: 800px) {
         margin-left: 30px;
 
@@ -132,7 +144,28 @@ body {
     }
 }
 
+.homepage {
 
+    &__image {
+        display: none;
+    }
+
+    &__kontejner {
+        @media screen and (min-width: 800px) {
+            display: flex;
+            justify-content: space-between;
+
+
+            .homepage__image {
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                align-self: center;
+            }
+        }
+    }
+
+}
 
 /*Stylování hero sekce*/
 

@@ -118,10 +118,14 @@
 		&__item {
 			border-bottom: 0px; 
 			background-color: promenne.$c-text-primary;
+			
+			&:first-child {
+				display: none;
+			}
 		}
 
 		&__link {
-			color: promenne.$c-white;
+			color: promenne.$c-white;		
 		}
 	}
 
