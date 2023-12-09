@@ -140,7 +140,7 @@
 .service__box {
   border-radius: 10px;
   padding: 20px;
-  margin-top: 20%;
+  margin: 10% 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .service__box:hover, .service__box:active, .service__box:focus {
@@ -171,6 +171,7 @@
   max-height: fit-content;
   box-shadow: 2px 2px 2px #b4c0ca;
   cursor: pointer;
+  text-decoration: none;
 }
 .button__service__title {
   display: block;
