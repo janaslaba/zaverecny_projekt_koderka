@@ -1,3 +1,5 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = function(eleventyConfig) {
 
 	// Výchozí výstupní složka: _site
@@ -8,6 +10,10 @@ module.exports = function(eleventyConfig) {
 	// Zkopírovat css/ to _site/css/
 	eleventyConfig.addPassthroughCopy("css");
 
+
+  // Plug-in Navigation
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   return {
     // možné formáty šablon
     templateFormats: ["njk", "html", "md", "liquid"],
@@ -17,5 +23,6 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
   }
+ 
 
 };

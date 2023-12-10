@@ -28,6 +28,12 @@ body {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    background-color: promenne.$c-background-service-box;
+    
+    /*Pro slider footer*/
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
 }
 
 .text--bold {
@@ -41,6 +47,9 @@ body {
         margin: 0px;
         background-color: promenne.$c-background-tertiary;
         padding-top: 20px;
+        position: relative;
+        z-index: 1;
+
         
         &__text {
             font-size: 24px;
@@ -73,6 +82,16 @@ body {
     &__headline {
         color: promenne.$c-primary;
         font-size: 34px;
+        
+        &::after {
+            content:"";
+            display: block;
+            width: 100px;
+            height: 4px;
+            margin: 17px 0;
+            background-color: promenne.$c-primary;
+            border-radius: promenne.$border-radius--standard;
+        }
     }
 
     &__description {
@@ -170,18 +189,25 @@ body {
 /*Stylování hero sekce*/
 
 .hero {
+
     background-image: url(../IMAGES/praha_small.jpg);
-    padding: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    
+    padding: 20px;
     display: grid;
     justify-items: center;
     align-items: center;
     border-radius: promenne.$border-radius--standard;
     overflow: hidden;
     
+    &__logo {
+        height: 100px;
+        text-align: center;
+    }
+
     &__title {
         font-size: 36px;
         color: promenne.$c-white;

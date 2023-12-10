@@ -156,7 +156,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: auto;
   gap: 20px;
-  margin: 60px 0;
+  margin: 20px 0;
 }
 
 .service__crossroad {
@@ -199,7 +199,7 @@
   align-items: center;
   flex-direction: column;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   .button__service--crossroad {
     flex-direction: row;
   }
@@ -209,7 +209,7 @@
     margin: 10px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 840px) {
   .button__service--crossroad {
     flex-direction: column;
   }
@@ -251,6 +251,10 @@
   align-content: center;
   padding-left: 3%;
   padding-right: 3%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .footer__body {
   margin: 0;
@@ -307,6 +311,11 @@ body {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #f5f8fa;
+  /*Pro slider footer*/
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .text--bold {
@@ -318,6 +327,8 @@ body {
   margin: 0px;
   background-color: #D8EBFC;
   padding-top: 20px;
+  position: relative;
+  z-index: 1;
 }
 .kontaktni__paticka__text {
   font-size: 24px;
@@ -341,6 +352,15 @@ body {
 .section__headline {
   color: #0E1BB7;
   font-size: 34px;
+}
+.section__headline::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  margin: 17px 0;
+  background-color: #0E1BB7;
+  border-radius: 10px;
 }
 .section__description {
   font-size: 24px;
@@ -410,16 +430,20 @@ body {
 /*Stylování hero sekce*/
 .hero {
   background-image: url(../IMAGES/praha_small.jpg);
-  padding: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  padding: 20px;
   display: grid;
   justify-items: center;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
+}
+.hero__logo {
+  height: 100px;
+  text-align: center;
 }
 .hero__title {
   font-size: 36px;
