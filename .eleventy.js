@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
 
 
   // Plug-in Navigation
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin); 
 
   return {
     // možné formáty šablon
