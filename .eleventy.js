@@ -10,9 +10,12 @@ module.exports = function(eleventyConfig) {
 	// Zkopírovat css/ to _site/css/
 	eleventyConfig.addPassthroughCopy("css");
 
-
+  eleventyConfig.addPassthroughCopy({ "Favicons": "/" });
+  
   // Plug-in Navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin); 
+
+
 
   return {
     // možné formáty šablon
