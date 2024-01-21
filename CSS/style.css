@@ -253,12 +253,18 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   align-content: center;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding: 3%;
+  /*Slider footer*/
   position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
+  /*Odstranění slider footer při velikosti větší než 1400px*/
+}
+@media screen and (min-width: 1400px) {
+  .footer {
+    position: static;
+  }
 }
 .footer__body {
   margin: 0;
@@ -321,6 +327,13 @@ body {
   min-height: 100vh;
   position: relative;
   z-index: 1;
+  /*Odstranění slider footer při velikosti větší než 1400px*/
+}
+@media screen and (min-width: 1400px) {
+  .main {
+    z-index: auto;
+    box-shadow: 0 0 0;
+  }
 }
 
 .text--bold {
@@ -335,6 +348,13 @@ body {
   position: relative;
   z-index: 1;
   box-shadow: 0 2px 3px 0 #F0F0F0;
+  /*Odstranění slider footer při velikosti větší než 1400px*/
+}
+@media screen and (min-width: 1400px) {
+  .kontaktni__paticka {
+    z-index: auto;
+    box-shadow: 0 0 0;
+  }
 }
 .kontaktni__paticka__text {
   font-size: 24px;

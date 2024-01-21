@@ -35,6 +35,13 @@ body {
     min-height: 100vh;
     position: relative;
     z-index: 1;
+
+    /*Odstranění slider footer při velikosti větší než 1400px*/
+    @media screen and (min-width: 1400px) {
+        z-index: auto;
+        box-shadow: 0 0 0;
+    }
+
 }
 
 .text--bold {
@@ -51,6 +58,12 @@ body {
         position: relative;
         z-index: 1;
         box-shadow: 0 2px 3px 0 promenne.$c-lightgrey;
+
+        /*Odstranění slider footer při velikosti větší než 1400px*/
+        @media screen and (min-width: 1400px) {
+            z-index: auto;
+            box-shadow: 0 0 0;
+        }
 
         
         &__text {

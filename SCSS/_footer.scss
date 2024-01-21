@@ -10,13 +10,18 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     align-content: center;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 3%;
 
+    /*Slider footer*/
     position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
+
+    /*Odstranění slider footer při velikosti větší než 1400px*/
+    @media screen and (min-width: 1400px) {
+        position: static;
+    }
     
     &__body {
         margin: 0;
